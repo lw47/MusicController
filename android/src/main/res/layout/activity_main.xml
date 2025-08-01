@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tv_app_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:gravity="center_horizontal"
+        android:text="为保证应用正常运行，请将应用的省电策略设置为无限制"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_app_hint">
+
+        <TextView
+            android:id="@+id/tv_ip_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="局域网ip："
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_refresh_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_ip"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp"
+            android:text="刷新ip"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ip_hint"
+            android:text="192.168.110.147"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_port_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ip"
+            android:layout_marginTop="20dp"
+            android:text="port(默认为12345)："
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_port_hint"
+            android:text="12345"
+            android:textSize="30sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="服务已暂停"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/btn_restart_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="重启服务"
+        android:textSize="30sp" />
+
+</RelativeLayout>
